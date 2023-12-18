@@ -1,0 +1,16 @@
+mutation {
+  addNewProduct(id: "greencap", description: "Green Cap", price: 55.5) {
+    id
+    reviews {
+      rating
+    }
+  }
+  shoeReview: addNewProductReview(id: "redshoe", rating: 5, comment: "Great coding shoe!") {
+    rating
+    comment
+  }
+  jacketReview: addNewProductReview(id: "greencap", rating: 4, comment: "Very warm!") {
+    rating
+    comment
+  }
+}

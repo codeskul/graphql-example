@@ -1,0 +1,32 @@
+query {
+  product(id: "redshoe"){
+    description
+    reviews{
+      comment
+      rating
+    }
+  }
+  products {
+    description
+  }
+  productByPrice(min:10, max:50) {
+    id
+    description
+    price
+  }
+  orders {
+    subtotal
+    items {
+      quantity
+      product {
+        id
+        price
+        description
+        reviews {
+          comment
+          rating
+        }
+      }
+    }
+  }
+}
